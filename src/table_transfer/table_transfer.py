@@ -7,7 +7,7 @@
 import json
 import logging
 from enum import Enum
-import helpers
+from . import helpers
 
 
 logger = logging.getLogger('logging table_transfer')
@@ -106,7 +106,6 @@ class TableTransfer:
     def upload_entries_to_csv(self, bucket=None, file_name=None):
         """warning:
            - TransformType.TRUNCATE_INSERT only
-           - on s3 uploading, file_name if provided will be used as TMP file (create => upload => remove)
         """
 
         self._check_entries()

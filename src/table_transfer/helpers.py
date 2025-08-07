@@ -31,9 +31,9 @@ ymq_queue = None
 DTTM_FORMAT = '%Y-%m-%d %H:%M:%S'
 HTTP = 'http://'
 HTTPS = 'https://'
-BLACKLISTED_DOMAIN = os.environ['BLACKLISTED_DOMAIN'].split(',')
-BLACKLISTED_URL = os.environ['BLACKLISTED_URL'].split(',')
-TEMP_FILE_NAME = os.environ['TEMP_FILE_NAME']
+BLACKLISTED_DOMAIN = os.environ.get('BLACKLISTED_DOMAIN', '').split(',')
+BLACKLISTED_URL = os.environ.get('BLACKLISTED_URL', '').split(',')
+TEMP_FILE_NAME = os.environ.get('TEMP_FILE_NAME', 'TEMP_FILE_NAME')
 
 
 def _timestamp_to_dttm(timestamp: int, dttm_format: str = DTTM_FORMAT) -> str:

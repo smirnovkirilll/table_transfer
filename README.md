@@ -16,7 +16,7 @@ The only reason it is published is to host it in a highly available environment.
 ### installation
 
 ```shell
-pip install https://github.com/smirnovkirilll/table_transfer.git@main
+pip install git+https://github.com/smirnovkirilll/table_transfer.git
 ```
 
 
