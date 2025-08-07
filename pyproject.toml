@@ -1,0 +1,29 @@
+[build-system]
+requires = [
+    "hatchling",
+    "beautifulsoup4",
+    "boto3",
+    "psycopg2-binary",
+    "yandexcloud",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "table_transfer"
+version = "2025.08.07"
+authors = [
+  { name="Kirill Smirnov", gighub="https://github.com/smirnovkirilll" },
+]
+description = "Lightweight library, intended to help transfer CSV/JSON/Postgresql table/dict in any direction"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/smirnovkirilll/table_transfer"
+Issues = "https://github.com/smirnovkirilll/table_transfer/issues"
