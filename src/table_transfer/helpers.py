@@ -36,17 +36,17 @@ BLACKLISTED_URL = os.environ.get('BLACKLISTED_URL', '').split(',')
 TEMP_FILE_NAME = os.environ.get('TEMP_FILE_NAME', 'TEMP_FILE_NAME')
 
 
-def _timestamp_to_dttm(timestamp: int, dttm_format: str = DTTM_FORMAT) -> str:
+def timestamp_to_dttm(timestamp: int, dttm_format: str = DTTM_FORMAT) -> str:
 
     return datetime.strftime(datetime.fromtimestamp(timestamp), dttm_format)
 
 
-def _date_to_timestamp(date: str, date_format: str) -> int:
+def date_to_timestamp(date: str, date_format: str) -> int:
 
     return int(datetime.strptime(date, date_format).timestamp())
 
 
-def _requests_session() -> Session:
+def requests_session() -> Session:
     """
     need more flexible retry policy
     https://stackoverflow.com/questions/15431044/can-i-set-max-retries-for-requests-request
