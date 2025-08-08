@@ -36,9 +36,9 @@ BLACKLISTED_URL = os.environ.get('BLACKLISTED_URL', '').split(',')
 TEMP_FILE_NAME = os.environ.get('TEMP_FILE_NAME', 'TEMP_FILE_NAME')
 
 
-def timestamp_to_dttm(timestamp: int, dttm_format: str = DTTM_FORMAT) -> str:
+def timestamp_to_dttm(timestamp: tp.Union[int, float], dttm_format: str = DTTM_FORMAT) -> str:
 
-    return datetime.strftime(datetime.fromtimestamp(timestamp), dttm_format)
+    return datetime.fromtimestamp(timestamp).strftime(dttm_format)
 
 
 def date_to_timestamp(date: str, date_format: str) -> int:
