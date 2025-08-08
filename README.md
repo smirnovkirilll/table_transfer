@@ -1,13 +1,17 @@
 ### what is it?
 
 Lightweight library, intended to help transfer CSV/JSON/Postgresql table/dict in any direction.
+
 Table/dict supposed be stored locally, in s3-compatible storage or Postgresql database.
 
 
 ### disclaimer
+
 This library is under active development, any interface may change without notice.
-It is part of another private project, provided "as is" and is unlikely to be changed upon request.
-The only reason it is published is to host it in a highly available environment.
+
+It is part of another [private project](https://github.com/smirnovkirilll/lookmomimadataengineer), provided "as is" and is unlikely to be changed upon request.
+
+The main reason it is published is to host it in a highly available environment.
 
 > [!WARNING]
 > Overall: there is no point in using it for anyone, please use [pandas](https://github.com/pandas-dev/pandas) instead
@@ -73,4 +77,4 @@ This design decision defines limitations of library:
 - snapshot ingestion model is in prior (no increments/chunks or whatever)
 
 > [!NOTE]
-> This library is designed for migrating small to medium sized tables and is certainly not intended for use in production data warehouses
+> This library is designed for migrating small to medium-sized tables and is certainly not intended for use in production data warehouses
